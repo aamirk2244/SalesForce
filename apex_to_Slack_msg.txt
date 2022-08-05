@@ -1,0 +1,14 @@
+public class Youtube {
+	
+    public static void testPrint()
+    {
+         Http http = new Http();
+        HttpRequest req = new HttpRequest();
+        req.setEndpoint('https://hooks.slack.com/services/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');
+        
+        req.setMethod('POST');
+        req.setHeader('Content-Type','application/json');
+		req.setBody('{"text":"Hello, World from apex class!"}');
+        http.send(req);
+    }
+}
